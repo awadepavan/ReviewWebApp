@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Review Application</h1>
+        
+        <!-- Form to Add Review -->
+        <form id="reviewForm" action="/api/add-review" method="POST">
+            <input type="text" id="companyName" placeholder="Company Name" required>
+            <input type="text" id="pros" placeholder="Pros" required>
+            <input type="text" id="cons" placeholder="Cons" required>
+            <textarea id="review" placeholder="Please provide your rating Here out of 10...." required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <div id="message"></div>
+
+        <!-- Search Form -->
+        <h2>Search Review by Company</h2>
+        <form id="searchForm" action="/api/search-review" method="GET">
+            <input type="text" id="searchCompany" placeholder="Enter company name" required>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- All Reviews Section -->
+        <h2>All Reviews</h2>
+        <div id="reviewsList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
